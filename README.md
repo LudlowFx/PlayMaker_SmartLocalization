@@ -12,4 +12,4 @@ Last updated August 20, 2014. v0.1.2
 PlayMaker : https://www.assetstore.unity3d.com/en/#!/content/368
 
 SmartLocalization : https://www.assetstore.unity3d.com/en/#!/content/7543
-(https://github.com/NiklasBorglund/SmartLocalization)
+(https://github.com/NiklasBorglund/SmartLocalization) 
