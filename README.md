@@ -10,7 +10,7 @@ He currently work on :
 
 #
 
-Last updated August 21, 2014. v0.1.2
+Last updated August 21, 2014. v0.1.2f1
 
 PlayMaker : https://www.assetstore.unity3d.com/en/#!/content/368
 
