@@ -1,2 +1,0 @@
-PlayMaker_SmartLocalization
-===========================
