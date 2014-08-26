@@ -1,6 +1,13 @@
 PlayMaker_SmartLocalization
 ===========================
 
+### Important ###
+
+This version is functional, but the next update will wait for the official release of Unity3D4.6. And especially PlayMaker to integrate fully SmartLocalization in future actions related to new uGUI2.
+
+#################
+
+
 This bridge between Playmaker and SmartLocalization is currently in Beta version.
 
 He currently work on :
