@@ -7,6 +7,8 @@ This version is functional on Unity 4.5.x, but the next update will wait for the
 
 27/02/2015 : This package does not work with the 4.6.x versions currently. Playmaker 1.8 still not released the next update package is not yet defined! 
 
+05/03/2015 : Currently rewrite all the scripts. New version supports Unity 5 soon.
+
 ## Description
 
 This bridge between Playmaker and SmartLocalization is currently in Beta version.
