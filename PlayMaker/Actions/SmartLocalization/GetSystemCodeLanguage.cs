@@ -6,8 +6,8 @@ using SmartLocalization;
 namespace HutongGames.PlayMaker.Actions
 {
     [ActionCategory("SmartLocalization")]
-    [Tooltip("Get Loaded Language CodeName")]
-    public class GetCodeLoadedLanguage : FsmStateAction
+    [Tooltip("Get system Language CodeName. If it is not managed by SmartLocalization, the default language will be loaded.")]
+    public class GetSystemCodeLanguage : FsmStateAction
     {
 
         private LanguageManager langManager;
@@ -29,8 +29,9 @@ namespace HutongGames.PlayMaker.Actions
         public override void OnEnter()
         {
             langManager = LanguageManager.Instance;
+            string langCode = langManager.GetSupportedSystemLanguageCode();
 
-            variable.Value = langManager.LoadedLanguage;
+            variable.Value = langCode != null ? langCode : langManager.defaultLanguage;
         }
 
         public override void OnUpdate()

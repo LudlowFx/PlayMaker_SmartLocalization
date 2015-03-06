@@ -1,28 +1,30 @@
 PlayMaker_SmartLocalization
 ===========================
 
-## Important
 
-This version is functional on Unity 4.5.x, but the next update will wait for the official release of Unity3D4.6. And especially PlayMaker to integrate fully SmartLocalization in future actions related to new uGUI2.
+This addon allows you to use SmartLocalization within PlayMaker actions to expand the possibilities of the latter and to provide support for state your projects in different languages, and this very easily while remaining free.
 
-27/02/2015 : This package does not work with the 4.6.x versions currently. Playmaker 1.8 still not released the next update package is not yet defined! 
 
-05/03/2015 : Currently rewrite all the scripts. New version supports Unity 5 soon.
 
 ## Description
+--------------
 
-This bridge between Playmaker and SmartLocalization is currently in Beta version.
+	He currently work on :
 
-He currently work on :
-- Unity3D 4.5.x+ (4.6b17 too)
-- PlayMaker V1.7.7.2 
-- SmartLocalization v2.004.
+	- Unity 5.0.0f4
+	- PlayMaker V1.7.8
+	- SmartLocalization v2.1005
 
-#
+	
+	
+Last updated March 06, 2015. Version 1.0.1
 
-Last updated August 21, 2014. v0.1.2f1
+
+Read the Release Notes for more information about the new features and fixes.
+
 
 PlayMaker : https://www.assetstore.unity3d.com/en/#!/content/368
+(http://hutonggames.com/playmakerforum/index.php)
 
 SmartLocalization : https://www.assetstore.unity3d.com/en/#!/content/7543
 (https://github.com/NiklasBorglund/SmartLocalization) 

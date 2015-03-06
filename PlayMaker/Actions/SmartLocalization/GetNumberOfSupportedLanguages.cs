@@ -1,31 +1,43 @@
+﻿/* @LudlowFx : Addon Version 1.0.1 (06 March 2015) */
+
 using UnityEngine;
 using SmartLocalization;
 
 namespace HutongGames.PlayMaker.Actions
 {
-    [ActionCategory("SmartLocalization (Beta)")]
-    [Tooltip("Get number of languages create and available in SmartLocalization (int)")]
+    [ActionCategory("SmartLocalization")]
+    [Tooltip("Return number of languages create and available in SmartLocalization")]
     public class GetNumberOfSupportedLanguages : FsmStateAction
     {
-        private LanguageManager languageManager;
+
+        private LanguageManager langManager;
 
         [RequiredField]
         [UIHint(UIHint.Variable)]
-        [Tooltip("Get number of languages create and available in SmartLocalization")]
-        public FsmInt variableNumber;
+        public FsmInt variable;
+
+        [Tooltip("(Optional)")]
+        public FsmEvent sendEvent;
+
 
         public override void Reset()
         {
-            variableNumber = null;
+            variable = null;
+            sendEvent = null;
         }
 
         public override void OnEnter()
         {
-            languageManager = LanguageManager.Instance;
+            langManager = LanguageManager.Instance;
+            variable.Value = langManager.NumberOfSupportedLanguages;
+        }
 
-            variableNumber.Value = languageManager.NumberOfSupportedLanguages;
+        public override void OnUpdate()
+        {
+            if (sendEvent != null) { Fsm.Event(sendEvent); }
+
+            Finish();
         }
 
     }
 }
-
