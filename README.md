@@ -13,7 +13,7 @@ WebPlayer (Unity5) Demonstration : http://urlz.fr/1Gyy
 
 	He currently work on :
 
-	- Unity 5.0.0f4
+	- Unity 4.6 or Higher and Unity 5
 	- PlayMaker V1.7.8
 	- SmartLocalization v2.1005
 
