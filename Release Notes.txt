@@ -1,5 +1,12 @@
- 
 
+Version 1.1.6 (20 March 2015)
+-----------------------------
+
+	- Rewriting action "ChangeLanguage" 
+	- Add Documentation in package (pdf)
+ 
+ 
+ 
 Version 1.0.1 (06 March 2015)
 -----------------------------
 

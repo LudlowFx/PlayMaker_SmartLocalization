@@ -2,7 +2,8 @@ PlayMaker_SmartLocalization
 ===========================
 
 
-This addon allows you to use SmartLocalization within PlayMaker actions to expand the possibilities of the latter and to provide support for state your projects in different languages, and this very easily while remaining free.
+This extension to PlayMaker will provide you with new actions to communicate with localization data of SmartLocalization.
+So, you can use within your FSM to establish easily a project in different languages and this, intuitively.
 
 
 WebPlayer (Unity5) Demonstration : http://urlz.fr/1Gyy
@@ -19,7 +20,7 @@ WebPlayer (Unity5) Demonstration : http://urlz.fr/1Gyy
 
 	
 	
-Last updated March 06, 2015. Version 1.0.1
+Last updated March 20, 2015. Version 1.1.6
 
 
 Read the Release Notes for more information about the new features and fixes.

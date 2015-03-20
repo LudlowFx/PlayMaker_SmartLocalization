@@ -10,8 +10,6 @@ namespace HutongGames.PlayMaker.Actions
     public class GetSystemCodeLanguage : FsmStateAction
     {
 
-        private LanguageManager langManager;
-
         [RequiredField]
         [UIHint(UIHint.Variable)]
         public FsmString variable;
@@ -28,7 +26,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            langManager = LanguageManager.Instance;
+            LanguageManager langManager = LanguageManager.Instance;
             string langCode = langManager.GetSupportedSystemLanguageCode();
 
             variable.Value = langCode != null ? langCode : langManager.defaultLanguage;

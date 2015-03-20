@@ -10,8 +10,6 @@ namespace HutongGames.PlayMaker.Actions
     public class LocalizationTexture : FsmStateAction
     {
 
-        private LanguageManager langManager;
-
         [RequiredField]
         [Tooltip("Key name you want to retrieve Texture from SmartLocalization Database.")]
         public FsmString localizationKeyName;
@@ -29,7 +27,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            langManager = LanguageManager.Instance;
+            LanguageManager langManager = LanguageManager.Instance;
 
             variable.Value = langManager.GetTexture(localizationKeyName.Value);
 

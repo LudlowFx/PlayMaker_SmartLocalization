@@ -10,8 +10,6 @@ namespace HutongGames.PlayMaker.Actions
     public class LocalizationGameObject : FsmStateAction
     {
 
-        private LanguageManager langManager;
-
         [RequiredField]
         [Tooltip("Key name you want to retrieve GameObject from SmartLocalization Database.")]
         public FsmString localizationKeyName;
@@ -30,7 +28,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            langManager = LanguageManager.Instance;
+            LanguageManager langManager = LanguageManager.Instance;
 
             variable.Value = langManager.GetPrefab(localizationKeyName.Value);
 

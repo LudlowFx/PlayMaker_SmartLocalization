@@ -10,8 +10,6 @@ namespace HutongGames.PlayMaker.Actions
     public class LocalizationText : FsmStateAction
     {
 
-        private LanguageManager langManager;
-
         [RequiredField]
         [Tooltip("Key name you want to retrieve Text (String) from SmartLocalization Database.")]
         public FsmString localizationKeyName;
@@ -30,7 +28,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            langManager = LanguageManager.Instance;
+            LanguageManager langManager = LanguageManager.Instance;
             string tfK = langManager.GetTextValue(localizationKeyName.Value);
 
             variable.Value = (tfK != null ? tfK : "[" + localizationKeyName.Value + "_Not Found]");

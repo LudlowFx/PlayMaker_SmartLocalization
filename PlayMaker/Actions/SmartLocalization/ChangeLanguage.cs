@@ -1,4 +1,4 @@
-﻿/* @LudlowFx : Addon Version 1.0.1 (06 March 2015) */
+﻿/* @LudlowFx : Addon Version 1.1.6 (18 March 2015) */
 
 using UnityEngine;
 using SmartLocalization;
@@ -7,18 +7,16 @@ namespace HutongGames.PlayMaker.Actions
 {
     [ActionCategory("SmartLocalization")]
     [Tooltip("Change Current Language Used In Game")]
-    public class ChangeCurrentLanguage : FsmStateAction
+    public class ChangeLanguage : FsmStateAction
     {
 
-        private LanguageManager langManager;
+        private FsmString languageCodename;
+        public string[] availableCulturesCdnArray;
+        public int selectLanguageIndex;
 
-        [RequiredField]
-        [Tooltip("Specify CodeName language to load. The default language will be loaded if the specified language is not supported by SmartLocalization.")]
-        public FsmString languageCodename;
-
-        [RequiredField]
+        [Tooltip("Local variable to use to assign the 'Codename' of loaded Language . (Optional)")]
         [UIHint(UIHint.Variable)]
-        public FsmString assignLocally;
+        public FsmString assignTo;
 
         [Tooltip("(Optional)")]
         public FsmEvent sendEvent;
@@ -27,13 +25,20 @@ namespace HutongGames.PlayMaker.Actions
         public override void Reset()
         {
             languageCodename = null;
-            assignLocally = null;
+            assignTo = null;
             sendEvent = null;
         }
 
         public override void OnEnter()
         {
-            langManager = LanguageManager.Instance;
+            LanguageManager langManager = LanguageManager.Instance;
+
+            if (selectLanguageIndex > availableCulturesCdnArray.Length)
+            {
+                Debug.LogError("[FSM Error] ! An Action returns an index that does not exist. You must select a language.");
+                Debug.Break();
+            }
+            else { languageCodename = availableCulturesCdnArray[selectLanguageIndex]; }
 
             if (languageCodename.Value != langManager.LoadedLanguage)
             {
@@ -42,7 +47,7 @@ namespace HutongGames.PlayMaker.Actions
                     langManager.ChangeLanguage(languageCodename.Value);
                 }
             }
-            assignLocally.Value = langManager.LoadedLanguage;
+            assignTo.Value = langManager.LoadedLanguage;
         }
 
         public override void OnUpdate()
